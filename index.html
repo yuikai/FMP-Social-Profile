@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Social links profile</title>
+
+  <!-- development version, includes helpful console warnings -->
+  <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+  <link rel="stylesheet" type="text/css" href="./styles.css"/>
+</head>
+<body>
+  <div id="app" class="container">
+    <div class="bio">
+      <img :src="profileImg" alt="Profile Image"/>
+      <h1>{{ name }}</h1>
+      <h2>{{ location }}</h2>
+      <p>{{ about }}</p>
+    </div>
+    <div class="links">
+      <button v-for="platform in platforms">{{ platform }}</button>
+    </div>
+  </div>
+
+  <br/>
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">uKai</a>.
+  </div>
+
+  <script src="./main.js"></script>
+</body>
+</html>
